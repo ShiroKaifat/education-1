@@ -1,5 +1,9 @@
 function factorial(n) {
-  // Напиши свой код здесь
+    let k = 1;
+    for (let i = 1; i <= n; i++) {
+        k = k * i;
+    }
+    return k;
 }
 
 window.factorial = factorial;
