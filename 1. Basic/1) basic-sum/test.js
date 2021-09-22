@@ -1,4 +1,4 @@
-import sum from './index';
+import sum from './index.js';
 
 describe('basic-sum', () => {
   test('should be function ', () => {
