@@ -1,8 +1,7 @@
-function sum(a, b) {
-  let k = a + b;
-  return k;
+function isOdd(a) {
+  //Напиши свой код здесь
 }
 
-window.sum = sum;
+window.isOdd = isOdd;
 
-export default sum;
+export default isOdd;
