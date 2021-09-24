@@ -1,6 +1,6 @@
 function sum(a, b) {
-    let k = a + b;
-    return k;
+
+    return  a + b;
 }
 
 window.sum = sum;
