@@ -1,10 +1,10 @@
 function factorial(n) {
-    let k = 1;
+    let fact = 1;
 
     for (let i = 1; i <= n; i++) {
-        k *= i;
+        fact *= i;
     }
-    return k;
+    return fact;
 }
 
 window.factorial = factorial;
