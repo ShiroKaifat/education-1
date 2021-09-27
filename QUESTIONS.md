@@ -97,8 +97,11 @@
     Существует всего четыре возможные логические комбинации:
 
 alert( true || true );   // true
+
 alert( false || true );  // true
+
 alert( true || false );  // true
+
 alert( false || false ); // false
 
    && (И)
@@ -106,13 +109,18 @@ alert( false || false ); // false
    В традиционном программировании И возвращает true, если оба аргумента истинны, а иначе – false:
 
 alert( true && true );   // true
+
 alert( false && true );  // false
+
 alert( true && false );  // false
+
 alert( false && false ); // false
 
    ! (НЕ)
    Возвращает противоположное значение.
+
    alert( !true ); // false
+
    alert( !0 ); // true
 
 23. Что такое undefined? Что такое null? Как эти типы ведут себя при преобразованию к другим типам и при сравнении с другими типами?
