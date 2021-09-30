@@ -1,6 +1,6 @@
 function findPair(arr) {
     return arr.find(value => {
-        if (arr. length - arr.filter(test => test !== value).length === 2) {
+        if (arr.length - arr.filter(test => test !== value).length === 2) {
             return value;
         }
     }) || null;
