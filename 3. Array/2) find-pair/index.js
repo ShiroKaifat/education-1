@@ -11,7 +11,6 @@ function findPair(arr) {
     }) || null;
 }
 
-
 window.findPair = findPair;
 
 export default findPair;
