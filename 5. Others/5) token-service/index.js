@@ -1,4 +1,5 @@
 class TokenService {
+
     constructor() {
         this.cbs = [];
     }
