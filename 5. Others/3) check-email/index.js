@@ -1,5 +1,5 @@
 function isValidEmail(email) {
-    return email.includes('@gmail.com');
+    return /^[0-9a-z._-]+@[0-9a-z]+\.[a-z]+$/i.test(email);
 }
 
 window.isValidEmail = isValidEmail;
