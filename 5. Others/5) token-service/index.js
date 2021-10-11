@@ -10,7 +10,6 @@ class TokenService {
 
     setToken(token) {
         if (token) {
-
             if (this.getToken() !== token) {
                 localStorage.setItem('_token_', token);
                 this.fireChangeEvent(token);
