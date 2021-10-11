@@ -1,6 +1,6 @@
 function rowZero(str) {
     if (str.includes('0')) {
-        let countZero = [];
+        const countZero = [];
         let count = 0;
 
         for (let i = 0; i < str.length; i++) {
@@ -11,7 +11,7 @@ function rowZero(str) {
             }
             countZero.push(count);
         }
-        return Math.max.apply(null, countZero);
+        return Math.max(...countZero);
     }
     return 0;
 }
