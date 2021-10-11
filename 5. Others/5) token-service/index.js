@@ -6,9 +6,11 @@ class TokenService {
         this.cbs.push(callback);
     }
     setToken(token) {
+
         if (!token) {
             this.removeToken();
         }else {
+
             if (this.getToken() !== token) {
                 localStorage.setItem('_token_', token);
                 this.fireChangeEvent(token);
