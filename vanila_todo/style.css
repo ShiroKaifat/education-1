@@ -4,3 +4,23 @@
     flex-direction: column;
     margin-top: 30px;
 }
+.input-text {
+    display: flex;
+}
+.task-container {
+    display: flex;
+    align-items: center;
+}
+.divForCheck {
+    display: flex;
+    justify-content: center;
+}
+.text-task {
+    font-size: 18px;
+    color: white;
+    margin-left: 8px;
+}
+.done-text {
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: line-through;
+}
