@@ -12,17 +12,44 @@ const updateValue = (event) => {
     valueInput = event.target.value;
 }
 
+const colorChoice = () => {
+    let colorPick;
+    document.getElementsByName('chk').forEach(item => {
+        if (item.checked) {
+            switch (item.value) {
+                case 'blue':
+                    colorPick = '#0000FFFF';
+                    break;
+                case 'dark-orange':
+                    colorPick = '#ffa400';
+                    break;
+                case 'green':
+                    colorPick = '#008000FF';
+                    break;
+                case 'red':
+                    colorPick = '#FF0000FF';
+                    break;
+                case 'bright-green':
+                    colorPick = '#00d669';
+                    break;
+                case 'purple-blue':
+                    colorPick = '#530cff';
+                    break;
+            }
+        }
+    });
+    return colorPick;
+}
+
 const onClickButton = () => {
-    console.log(document.getElementsByName('chk'));
     if (valueInput.trim() === '') {
         input.value = '';
         return;
     }
-
     allTasks.push({
         text: valueInput,
         isCheck: false,
-        color: document.getElementById('color-task').value
+        color: colorChoice()
     });
     valueInput = '';
     input.value = '';
