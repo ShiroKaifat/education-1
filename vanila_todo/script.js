@@ -13,11 +13,12 @@ const updateValue = (event) => {
 }
 
 const onClickButton = () => {
-
+    console.log(document.getElementsByName('chk'));
     if (valueInput.trim() === '') {
         input.value = '';
         return;
     }
+
     allTasks.push({
         text: valueInput,
         isCheck: false,

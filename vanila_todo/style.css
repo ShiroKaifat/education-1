@@ -51,6 +51,9 @@
     display: flex;
     margin-top: 10px;
 }
+.color input {
+    opacity: 0;
+}
 .color div {
     margin: 2px;
     width: 15px;
