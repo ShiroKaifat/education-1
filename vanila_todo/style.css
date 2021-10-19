@@ -6,21 +6,32 @@
 }
 .input-text {
     display: flex;
+    justify-content: space-evenly;
+    border: 1px solid black;
+}
+.input-text input, button {
+    border-style: none;
+    margin: 10px;
+    background-color: white;
+}
+.input-text button {
+    background-color: #299d90;
+}
+.input-text input:focus {
+    outline: none;
 }
 .task-container {
     display: flex;
     align-items: center;
 }
-.divForCheck {
-    display: flex;
-    justify-content: center;
-}
+
 .text-task {
     font-size: 18px;
     color: white;
     margin-left: 8px;
+    padding: 15px;
 }
 .done-text {
-    color: rgba(0, 0, 0, 0.3);
     text-decoration: line-through;
+    background: #ccc;
 }

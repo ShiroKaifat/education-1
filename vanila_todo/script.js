@@ -1,5 +1,5 @@
 const allTasks = [];
-let valueInput = 'empty';
+let valueInput = '';
 let input = null;
 
 window.onload = function init () {
@@ -13,12 +13,17 @@ const updateValue = (event) => {
 }
 
 const onClickButton = () => {
+
+    if (valueInput.trim() === '') {
+        input.value = '';
+        return;
+    }
     allTasks.push({
         text: valueInput,
         isCheck: false,
         color: document.getElementById('color-task').value
     });
-    valueInput = 'empty';
+    valueInput = '';
     input.value = '';
     render();
 }
@@ -31,31 +36,40 @@ const onChangeCheckbox = (index) => {
 const render = () => {
     const content = document.getElementById('content');
     const addButton = document.getElementById(`addButton`);
-    addButton.onclick =  () =>  onClickButton();
+    addButton.onclick = () =>  onClickButton();
 
     while (content.firstChild) {
         content.removeChild(content.firstChild);
     }
 
-    allTasks.map((item, index) => {
+    allTasks.forEach((item, index) => {
        const container = document.createElement('div');
        container.id = `task-${index}`;
        container.className = 'task-container';
        const divForCheck = document.createElement('div');
-       divForCheck.className = 'divForCheck';
        const checkbox = document.createElement('input');
        checkbox.type = 'checkbox';
        checkbox.checked = item.isCheck;
        checkbox.onchange = () => onChangeCheckbox(index);
-       checkbox.className = item.isCheck ? 'text-task done-text' : 'text-task';
+
        divForCheck.appendChild(checkbox);
        container.appendChild(divForCheck);
        const text = document.createElement('p');
        text.innerText = item.text;
-       text.className = item.isCheck ? 'text-task done-text' : 'text-task';
+
+       if (item.isCheck) {
+           text.className = 'text-task done-text';
+           text.style.background = '#ccc';
+           divForCheck.className = 'text-task done-text';
+           divForCheck.style.background = '#ccc';
+       } else {
+           text.className = 'text-task';
+           text.style.background = item.color;
+           divForCheck.className = 'text-task';
+           divForCheck.style.background = item.color;
+       }
        container.appendChild(text);
        content.appendChild(container);
-       divForCheck.style.background = item.color;
-       text.style.background = item.color;
+
     });
 }
