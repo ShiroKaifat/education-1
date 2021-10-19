@@ -47,3 +47,33 @@
     text-decoration: line-through;
     background: #ccc;
 }
+.color {
+    display: flex;
+    margin-top: 10px;
+}
+.color div {
+    margin: 2px;
+    width: 15px;
+    height: 15px;
+}
+.blue {
+    background: blue;
+}
+.blue:checked {
+
+}
+.dark-orange {
+    background: #ffa400;
+}
+.green {
+    background: green;
+}
+.red {
+    background: red;
+}
+.bright-green {
+    background: #00d669;
+}
+.purple-blue {
+    background: #530cff;
+}
