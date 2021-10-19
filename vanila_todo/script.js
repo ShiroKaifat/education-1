@@ -55,6 +55,7 @@ const render = () => {
        divForCheck.appendChild(checkbox);
        container.appendChild(divForCheck);
        const text = document.createElement('p');
+       text.style.width = '100%';
        text.innerText = item.text;
 
        if (item.isCheck) {

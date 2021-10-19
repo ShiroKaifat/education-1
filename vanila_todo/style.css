@@ -4,6 +4,9 @@
     flex-direction: column;
     margin-top: 30px;
 }
+.testCase div {
+    width: 30%;
+}
 .input-text {
     display: flex;
     justify-content: space-evenly;
@@ -23,12 +26,21 @@
 .task-container {
     display: flex;
     align-items: center;
+    margin-bottom: 2px;
+}
+.task-container div {
+    margin: 0;
+    width: 16%;
+}
+.task-container p {
+    padding-right: 337px;
+    overflow: hidden;
 }
 
 .text-task {
     font-size: 18px;
     color: white;
-    margin-left: 8px;
+    margin: 0 0 0 4px;
     padding: 15px;
 }
 .done-text {
