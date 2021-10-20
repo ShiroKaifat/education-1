@@ -5,6 +5,8 @@ let input = null;
 window.onload = function init () {
     input = document.getElementById('add-task');
     input.addEventListener('change', updateValue);
+    colorChoice();
+    document.getElementById('color').addEventListener('change', colorChoice);
     render();
 }
 
@@ -15,25 +17,32 @@ const updateValue = (event) => {
 const colorChoice = () => {
     let colorPick;
     document.getElementsByName('chk').forEach(item => {
+        document.getElementById(item.value).className = `${item.value}`;
         if (item.checked) {
             switch (item.value) {
                 case 'blue':
                     colorPick = '#0000FFFF';
+                    document.getElementById('blue').className = 'blue-checked';
                     break;
                 case 'dark-orange':
                     colorPick = '#ffa400';
+                    document.getElementById('dark-orange').className = 'dark-orange-checked';
                     break;
                 case 'green':
                     colorPick = '#008000FF';
+                    document.getElementById('green').className = 'green-checked';
                     break;
                 case 'red':
                     colorPick = '#FF0000FF';
+                    document.getElementById('red').className = 'red-checked';
                     break;
                 case 'bright-green':
                     colorPick = '#00d669';
+                    document.getElementById('bright-green').className = 'bright-green-checked';
                     break;
                 case 'purple-blue':
                     colorPick = '#530cff';
+                    document.getElementById('purple-blue').className = 'purple-blue-checked';
                     break;
             }
         }
@@ -63,8 +72,8 @@ const onChangeCheckbox = (index) => {
 
 const render = () => {
     const content = document.getElementById('content');
-    const addButton = document.getElementById(`addButton`);
-    addButton.onclick = () =>  onClickButton();
+    document.getElementById(`addButton`).onclick = () =>  onClickButton();
+    document.getElementById('color').onclick = () => colorChoice();
 
     while (content.firstChild) {
         content.removeChild(content.firstChild);
@@ -79,7 +88,6 @@ const render = () => {
        checkbox.type = 'checkbox';
        checkbox.checked = item.isCheck;
        checkbox.onchange = () => onChangeCheckbox(index);
-
        divForCheck.appendChild(checkbox);
        container.appendChild(divForCheck);
        const text = document.createElement('p');
@@ -99,6 +107,5 @@ const render = () => {
        }
        container.appendChild(text);
        content.appendChild(container);
-
     });
 }

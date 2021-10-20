@@ -36,7 +36,6 @@
     padding-right: 337px;
     overflow: hidden;
 }
-
 .text-task {
     font-size: 18px;
     color: white;
@@ -55,15 +54,12 @@
     opacity: 0;
 }
 .color div {
-    margin: 2px;
+    margin: 3px;
     width: 15px;
     height: 15px;
 }
 .blue {
     background: blue;
-}
-.blue:checked {
-
 }
 .dark-orange {
     background: #ffa400;
@@ -78,5 +74,27 @@
     background: #00d669;
 }
 .purple-blue {
+    background: #530cff;
+}
+.blue-checked, .dark-orange-checked, .green-checked, .red-checked, .bright-green-checked, .purple-blue-checked{
+    border: 1px solid white;
+    outline: 2px solid orange;
+}
+.blue-checked {
+    background: blue;
+}
+.dark-orange-checked {
+    background: #ffa400;
+}
+.green-checked{
+    background: green;
+}
+.red-checked {
+    background: red;
+}
+.bright-green-checked {
+    background: #00d669;
+}
+.purple-blue-checked {
     background: #530cff;
 }
