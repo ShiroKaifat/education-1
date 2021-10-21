@@ -1,6 +1,7 @@
 const allTasks = [];
 let valueInput = '';
 let input = null;
+let colorPick = null;
 
 window.onload = function init () {
     input = document.getElementById('add-task');
@@ -15,7 +16,6 @@ const updateValue = (event) => {
 }
 
 const colorChoice = () => {
-    let colorPick;
     document.getElementsByName('chk').forEach(item => {
         document.getElementById(item.value).className = `${item.value}`;
         if (item.checked) {
@@ -47,7 +47,6 @@ const colorChoice = () => {
             }
         }
     });
-    return colorPick;
 }
 
 const onClickButton = () => {
@@ -58,7 +57,7 @@ const onClickButton = () => {
     allTasks.push({
         text: valueInput,
         isCheck: false,
-        color: colorChoice()
+        color: colorPick
     });
     valueInput = '';
     input.value = '';

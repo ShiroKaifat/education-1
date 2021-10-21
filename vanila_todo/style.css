@@ -5,17 +5,21 @@
     margin-top: 30px;
 }
 .testCase div {
-    width: 30%;
+    width: 31vw;
 }
 .input-text {
     display: flex;
-    justify-content: space-evenly;
+    margin: 10px;
+    padding: 3px;
     border: 1px solid black;
 }
 .input-text input, button {
     border-style: none;
-    margin: 10px;
     background-color: white;
+}
+.input-text .color, button {
+    display: flex;
+    justify-content: right;
 }
 .input-text button {
     background-color: #299d90;
@@ -33,7 +37,7 @@
     width: 16%;
 }
 .task-container p {
-    padding-right: 337px;
+    padding-right: 26vw;
     overflow: hidden;
 }
 .text-task {
@@ -48,9 +52,11 @@
 }
 .color {
     display: flex;
-    margin-top: 10px;
+    margin-right: 10px;
 }
 .color input {
+    margin-top: 0;
+    margin-left: 0;
     opacity: 0;
 }
 .color div {
